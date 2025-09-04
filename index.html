@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omar Dev - INSANE CRAZY PORTFOLIO 🤯</title>
+<title>Omar Dev - MAX CRAZY INSANE 💥</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
 
@@ -15,14 +15,14 @@ body::before{
   content:'';
   position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
   background:linear-gradient(0deg, red, yellow, green, cyan, magenta, orange);
-  background-size:3000% 3000%;
-  animation:bgFlash 0.05s linear infinite;
+  background-size:2000% 2000%;
+  animation:bgFlash 0.5s linear infinite;
 }
 @keyframes bgFlash{
   0%{background-position:0% 0%;}
-  25%{background-position:100% 0%;}
+  25%{background-position:50% 50%;}
   50%{background-position:100% 100%;}
-  75%{background-position:0% 100%;}
+  75%{background-position:50% 50%;}
   100%{background-position:0% 0%;}
 }
 
@@ -31,7 +31,7 @@ header{
   min-height:100vh;
   display:flex;flex-direction:column;
   justify-content:center;align-items:center;text-align:center;
-  animation:headerShake 0.05s infinite alternate;
+  animation:headerShake 0.1s infinite alternate;
 }
 header h1{
   font-family:'Orbitron',sans-serif;font-size:6rem;
@@ -39,34 +39,35 @@ header h1{
 }
 header p{
   font-size:2.5rem;
-  animation:textFlicker 0.05s infinite alternate-reverse, floatText 0.05s infinite alternate;
+  animation:textFlicker 0.05s infinite alternate-reverse, floatText 0.2s infinite alternate;
 }
 
 /* Buttons */
 .btn{
   margin:0.5rem;padding:1rem 2rem;
   border:none;border-radius:50px;
-  font-weight:bold;
+  background:#ff00ff;color:#fff;font-weight:bold;
   cursor:pointer;transition:0.05s;
   display:inline-block;
   box-shadow:0 0 50px #ff00ff,0 0 100px #00ffff;
-  animation:btnPulse 0.05s infinite alternate;
+  animation:btnPulse 0.3s infinite alternate;
 }
 .btn:hover{
-  transform:scale(2) rotate(-45deg);
-  box-shadow:0 0 150px #ff00ff,0 0 200px #00ffff;
+  transform:scale(1.8) rotate(-35deg);
+  background:#00ffff;color:#000;
+  box-shadow:0 0 120px #ff00ff,0 0 180px #00ffff;
 }
 
 /* Back Button */
 #back-btn{
   position:fixed;top:20px;left:20px;
   padding:1rem 2rem;background:#ff00ff;color:#fff;
-  border-radius:30px;cursor:pointer;
+  border-radius:30px;box-shadow:0 0 50px #ff00ff;cursor:pointer;
   transition:0.05s;z-index:999;
-  animation:btnPulse 0.05s infinite alternate-reverse;
 }
 #back-btn:hover{
-  transform:scale(2) rotate(-60deg);
+  transform:scale(2) rotate(-45deg);
+  background:#00ffff;color:#000;
   box-shadow:0 0 150px #00ffff,0 0 200px #ff00ff;
 }
 
@@ -74,19 +75,19 @@ header p{
 #projects{padding:5rem 2rem;position:relative;height:100vh;}
 .project-card{
   background:#111;border-radius:25px;overflow:hidden;
-  box-shadow:0 0 100px rgba(0,255,255,0.8);
+  box-shadow:0 0 80px rgba(0,255,255,0.7);
   transition:transform 0.05s,box-shadow 0.05s;
   cursor:pointer;position:absolute;width:320px;height:300px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  animation:cardSpin 0.05s infinite linear alternate;
+  animation:cardSpin 0.3s infinite linear alternate;
 }
 .project-card img{
   width:100%;height:160px;object-fit:cover;filter:brightness(0.9);
   transition:0.05s;
 }
 .project-card:hover img{
-  filter:brightness(3) saturate(3);
-  transform:scale(2) rotate(45deg);
+  filter:brightness(2) saturate(3);
+  transform:scale(1.6) rotate(45deg);
 }
 .project-card h3, .project-card p{
   animation:textFlicker 0.05s infinite alternate;
@@ -103,33 +104,33 @@ section{padding:5rem 2rem;text-align:center;}
 }
 #contact button{
   padding:1rem;border:none;border-radius:30px;background:#ff00ff;color:#fff;
-  cursor:pointer;transition:0.05s;box-shadow:0 0 100px #ff00ff,0 0 150px #00ffff;
-  animation:btnPulse 0.05s infinite alternate;
+  cursor:pointer;transition:0.05s;box-shadow:0 0 80px #ff00ff,0 0 160px #00ffff;
+  animation:btnPulse 0.3s infinite alternate;
 }
 #contact button:hover{
-  transform:scale(2) rotate(-45deg);
-  box-shadow:0 0 200px #ff00ff,0 0 300px #00ffff;
+  transform:scale(1.5) rotate(-20deg);
+  background:#00ffff;color:#000;
+  box-shadow:0 0 150px #ff00ff,0 0 200px #00ffff;
 }
 #discord-btn{
   margin-top:1rem;padding:1rem 2rem;border-radius:25px;
   background:#7289da;color:#fff;font-weight:bold;
-  box-shadow:0 0 100px #7289da;text-decoration:none;display:inline-block;transition:0.05s;
-  animation:btnPulse 0.05s infinite alternate-reverse;
+  box-shadow:0 0 60px #7289da;text-decoration:none;display:inline-block;transition:0.05s;
 }
 #discord-btn:hover{
-  transform:scale(2) rotate(30deg);
-  box-shadow:0 0 200px #7289da,0 0 300px #7289da;
+  transform:scale(1.6) rotate(25deg);
+  box-shadow:0 0 150px #7289da,0 0 200px #7289da;
 }
 
 /* Footer */
 footer{text-align:center;padding:2rem;color:#555;background:#0a0a0a;}
 
 /* Animations */
-@keyframes floatText{0%{transform:translateY(0);}100%{transform:translateY(-50px);}}
-@keyframes headerShake{0%{transform:rotate(-30deg);}50%{transform:rotate(30deg);}100%{transform:rotate(-30deg);}}
-@keyframes cardSpin{0%{transform:rotate(0deg) scale(1);}25%{transform:rotate(180deg) scale(2);}50%{transform:rotate(360deg) scale(1.5);}75%{transform:rotate(540deg) scale(2);}100%{transform:rotate(720deg) scale(1);}}
-@keyframes textFlicker{0%{color:red; text-shadow:0 0 10px yellow;}25%{color:yellow; text-shadow:0 0 20px cyan;}50%{color:cyan; text-shadow:0 0 30px magenta;}75%{color:magenta; text-shadow:0 0 40px green;}100%{color:green; text-shadow:0 0 50px orange;} }
-@keyframes btnPulse{0%{transform:scale(1);}50%{transform:scale(2) rotate(30deg);}100%{transform:scale(1);}}
+@keyframes floatText{0%{transform:translateY(0);}100%{transform:translateY(-35px);}}
+@keyframes headerShake{0%{transform:rotate(-20deg);}50%{transform:rotate(20deg);}100%{transform:rotate(-20deg);}}
+@keyframes cardSpin{0%{transform:rotate(0deg) scale(1);}25%{transform:rotate(90deg) scale(1.5);}50%{transform:rotate(180deg) scale(1.3);}75%{transform:rotate(270deg) scale(1.6);}100%{transform:rotate(360deg) scale(1);}}
+@keyframes textFlicker{0%{color:red; text-shadow:0 0 10px yellow;}25%{color:yellow; text-shadow:0 0 20px cyan;}50%{color:cyan; text-shadow:0 0 30px magenta;}75%{color:magenta; text-shadow:0 0 40px green;}100%{color:green; text-shadow:0 0 50px orange;};}
+@keyframes btnPulse{0%{transform:scale(1);}50%{transform:scale(1.5) rotate(15deg);}100%{transform:scale(1);}}
 </style>
 </head>
 <body>
@@ -138,7 +139,7 @@ footer{text-align:center;padding:2rem;color:#555;background:#0a0a0a;}
 
 <header>
   <h1>Omar Dev</h1>
-  <p>Developer | AI Enthusiast | MAX CRAZY MODE 🤯</p>
+  <p>Developer | AI Enthusiast | EXTREME CRAZY MODE ON</p>
   <div>
     <a href="#projects" class="btn">Projects</a>
     <a href="#about" class="btn">About</a>
@@ -167,6 +168,12 @@ footer{text-align:center;padding:2rem;color:#555;background:#0a0a0a;}
 <footer>&copy; 2025 Omar Dev. All rights reserved.</footer>
 
 <script>
+// Confirm first
+if(!confirm("هل انت متاكد انك تبي تدوخ وتقع من طولك؟ (جرب ومش هتندم :))")){
+  document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:50vh;font-size:2rem'>رجوع 😅</h1>";
+  throw "User cancelled";
+}
+
 // Projects data
 const projects = [
   {name:"MaxyBot", description:"Discord bot for server management and fun commands.", link:"https://discord.com/oauth2/authorize?client_id=1409945925064982668&permissions=268823630&scope=bot%20applications.commands"},
@@ -202,7 +209,7 @@ document.addEventListener('mousemove', e => {
     if(dist < 400){
       card.dataset.vx = parseFloat(card.dataset.vx) + (Math.random()*60 - 30) - dx/5;
       card.dataset.vy = parseFloat(card.dataset.vy) + (Math.random()*60 - 30) - dy/5;
-      card.style.transform = `rotate(${Math.random()*2160-1080}deg) scale(${1+Math.random()*1})`;
+      card.style.transform = `rotate(${Math.random()*1440-720}deg) scale(${1+Math.random()*1})`;
       card.style.boxShadow = `0 0 150px ${colors[Math.floor(Math.random()*colors.length)]},0 0 300px ${colors[Math.floor(Math.random()*colors.length)]}`;
       if(Math.random()<0.2){
         card.style.left = Math.random()*(window.innerWidth-320)+'px';
@@ -219,8 +226,8 @@ function animate(){
     let y=parseFloat(card.style.top);
     x+=parseFloat(card.dataset.vx);
     y+=parseFloat(card.dataset.vy);
-    if(x<-300){x=-300; card.dataset.vx*=-1;}
-    if(y<-300){y=-300; card.dataset.vy*=-1;}
+    if(x<-250){x=-250; card.dataset.vx*=-1;}
+    if(y<-250){y=-250; card.dataset.vy*=-1;}
     if(x>window.innerWidth-180){x=window.innerWidth-180; card.dataset.vx*=-1;}
     if(y>window.innerHeight-180){y=window.innerHeight-180; card.dataset.vy*=-1;}
     card.style.left=x+'px';
