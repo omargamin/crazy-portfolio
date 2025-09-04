@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omar Dev - CRAZY PORTFOLIO +++++</title>
+<title>Omar Dev - CRAZY PORTFOLIO ×1000</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Roboto',sans-serif;background:#0a0a0a;color:#eee;overflow:hidden;cursor:crosshair;}
+body{font-family:'Roboto',sans-serif;background:#000;color:#fff;overflow:hidden;cursor:crosshair;}
 
-/* Crazy Background */
+/* CRAZY Rainbow Background */
 body::before{
   content:'';
   position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
-  background:linear-gradient(45deg,#ff00ff,#00ffff,#ff0000,#00ff00,#ffff00,#ff8800);
-  background-size:800% 800%;
-  animation:bgGradient 20s linear infinite;
+  background:linear-gradient(45deg, #ff00ff,#00ffff,#ff0000,#00ff00,#ffff00,#ff8800,#ff00ff,#00ffff);
+  background-size:1000% 1000%;
+  animation:bgCrazy 10s linear infinite;
 }
-@keyframes bgGradient{
-  0%{background-position:0% 50%;}
-  25%{background-position:50% 0%;}
-  50%{background-position:100% 50%;}
-  75%{background-position:50% 100%;}
-  100%{background-position:0% 50%;}
+@keyframes bgCrazy{
+  0%{background-position:0% 0%;}
+  25%{background-position:100% 0%;}
+  50%{background-position:100% 100%;}
+  75%{background-position:0% 100%;}
+  100%{background-position:0% 0%;}
 }
 
 /* Header */
@@ -31,77 +31,68 @@ header{
   min-height:100vh;
   display:flex;flex-direction:column;
   justify-content:center;align-items:center;text-align:center;
-  animation:headerShake 3s infinite alternate;
+  animation:shakeY 1s infinite alternate;
 }
 header h1{
-  font-family:'Orbitron',sans-serif;font-size:5rem;
-  background:linear-gradient(90deg,#ff00ff,#00ffff,#ff8800,#ff0000);
+  font-family:'Orbitron',sans-serif;font-size:6rem;
+  background:linear-gradient(90deg,#ff00ff,#00ffff,#ff8800,#ff0000,#00ff00);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  text-shadow:0 0 20px #ff00ff,0 0 40px #00ffff;
+  text-shadow:0 0 30px #ff00ff,0 0 60px #00ffff,0 0 90px #ff8800;
+  animation:glowText 2s infinite alternate;
 }
 header p{
-  font-size:2rem;color:#aaa;text-shadow:0 0 10px #0ff;
-  animation:floatText 2s infinite alternate;
-}
-@keyframes floatText{0%{transform:translateY(0);}100%{transform:translateY(-20px);}}
-@keyframes headerShake{
-  0%{transform:rotate(-3deg);}
-  25%{transform:rotate(3deg);}
-  50%{transform:rotate(-2deg);}
-  75%{transform:rotate(2deg);}
-  100%{transform:rotate(0deg);}
+  font-size:2.5rem;color:#fff;text-shadow:0 0 20px #0ff;
+  animation:floatText 1s infinite alternate-reverse;
 }
 
 /* Buttons */
 .btn{
-  margin:0.5rem;padding:0.8rem 1.5rem;
-  border:none;border-radius:20px;
-  background:#ff00ff;color:#fff;
-  cursor:pointer;transition:0.3s;text-decoration:none;
-  display:inline-block;box-shadow:0 0 20px #ff00ff,0 0 40px #00ffff;
-  animation:btnPulse 2s infinite alternate;
+  margin:0.5rem;padding:1rem 2rem;
+  border:none;border-radius:50px;
+  background:#ff00ff;color:#fff;font-weight:bold;
+  cursor:pointer;transition:0.2s;display:inline-block;
+  box-shadow:0 0 30px #ff00ff,0 0 60px #00ffff;
+  animation:pulseBtn 1s infinite alternate;
 }
 .btn:hover{
-  transform:scale(1.2) rotate(-5deg);
+  transform:scale(1.4) rotate(-15deg);
   background:#00ffff;color:#000;
-  box-shadow:0 0 40px #ff00ff,0 0 60px #00ffff;
-}
-@keyframes btnPulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.1);}
-  100%{transform:scale(1);}
+  box-shadow:0 0 60px #ff00ff,0 0 90px #00ffff,0 0 120px #ff8800;
 }
 
 /* Back Button */
 #back-btn{
   position:fixed;top:20px;left:20px;
   padding:1rem 2rem;background:#ff00ff;color:#fff;
-  border-radius:30px;box-shadow:0 0 20px #ff00ff;cursor:pointer;
-  transition:0.3s;z-index:999;
+  border-radius:30px;box-shadow:0 0 30px #ff00ff;cursor:pointer;
+  transition:0.2s;z-index:999;
 }
 #back-btn:hover{
-  transform:scale(1.3) rotate(-10deg);
+  transform:scale(1.5) rotate(-20deg);
   background:#00ffff;color:#000;
-  box-shadow:0 0 40px #00ffff;
+  box-shadow:0 0 60px #00ffff,0 0 90px #ff00ff;
 }
 
 /* Projects */
-#projects{
-  padding:5rem 2rem;
-  position:relative;height:100vh;
-}
+#projects{padding:5rem 2rem;position:relative;height:100vh;}
 .project-card{
-  background:#1a1a1a;border-radius:20px;overflow:hidden;
-  box-shadow:0 0 30px rgba(0,255,255,0.3);transition:transform 0.2s,box-shadow 0.2s;
-  cursor:pointer;position:absolute;width:300px;height:280px;
+  background:#111;border-radius:25px;overflow:hidden;
+  box-shadow:0 0 50px rgba(0,255,255,0.4);transition:transform 0.3s,box-shadow 0.3s;
+  cursor:pointer;position:absolute;width:320px;height:300px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
 }
 .project-card img{
-  width:100%;height:160px;object-fit:cover;filter:brightness(0.9);transition:0.3s;
+  width:100%;height:160px;object-fit:cover;filter:brightness(0.9);
+  transition:0.3s;
 }
-.project-card:hover img{filter:brightness(1.2) saturate(1.5);}
-.project-card h3{margin:0.5rem 0;font-size:1.5rem;color:#ff00ff;text-shadow:0 0 10px #00ffff;}
-.project-card p{margin:0 1rem 0.5rem;color:#aaa;font-size:1rem;}
+.project-card:hover img{
+  filter:brightness(1.5) saturate(2);
+  transform:scale(1.2) rotate(15deg);
+}
+.project-card h3{
+  margin:0.5rem 0;font-size:1.8rem;color:#ff00ff;text-shadow:0 0 20px #00ffff;
+}
+.project-card p{margin:0 1rem 0.5rem;color:#aaa;font-size:1.1rem;}
 
 /* About & Contact */
 section{padding:5rem 2rem;text-align:center;}
@@ -109,25 +100,36 @@ section{padding:5rem 2rem;text-align:center;}
 #contact{background:#111;}
 #contact form{display:flex;flex-direction:column;max-width:500px;margin:0 auto;}
 #contact input,#contact textarea{
-  padding:1rem;margin-bottom:1rem;border-radius:16px;border:none;
-  outline:none;background:#222;color:#eee;box-shadow:0 0 15px #0ff inset;
+  padding:1rem;margin-bottom:1rem;border-radius:20px;border:none;
+  outline:none;background:#222;color:#fff;box-shadow:0 0 25px #0ff inset;
 }
 #contact button{
-  padding:1rem;border:none;border-radius:20px;background:#ff00ff;color:#fff;
-  cursor:pointer;transition:0.4s;box-shadow:0 0 20px #ff00ff,0 0 40px #00ffff;
+  padding:1rem;border:none;border-radius:30px;background:#ff00ff;color:#fff;
+  cursor:pointer;transition:0.2s;box-shadow:0 0 30px #ff00ff,0 0 60px #00ffff;
 }
 #contact button:hover{
-  background:#00ffff;color:#000;transform:scale(1.1);box-shadow:0 0 40px #ff00ff,0 0 60px #00ffff;
+  transform:scale(1.2) rotate(-10deg);
+  background:#00ffff;color:#000;
+  box-shadow:0 0 60px #ff00ff,0 0 90px #00ffff;
 }
 #discord-btn{
-  margin-top:1rem;padding:1rem 2rem;border-radius:20px;
+  margin-top:1rem;padding:1rem 2rem;border-radius:25px;
   background:#7289da;color:#fff;font-weight:bold;
-  box-shadow:0 0 20px #7289da;text-decoration:none;display:inline-block;transition:0.4s;
+  box-shadow:0 0 30px #7289da;text-decoration:none;display:inline-block;transition:0.3s;
 }
-#discord-btn:hover{transform:scale(1.2);box-shadow:0 0 50px #7289da;}
+#discord-btn:hover{
+  transform:scale(1.3) rotate(5deg);
+  box-shadow:0 0 60px #7289da,0 0 90px #7289da;
+}
 
 /* Footer */
 footer{text-align:center;padding:2rem;color:#555;background:#0a0a0a;}
+
+/* Animations */
+@keyframes floatText{0%{transform:translateY(0);}100%{transform:translateY(-25px);}}
+@keyframes shakeY{0%{transform:rotate(-5deg);}25%{transform:rotate(5deg);}50%{transform:rotate(-3deg);}75%{transform:rotate(3deg);}100%{transform:rotate(0deg);}}
+@keyframes glowText{0%{text-shadow:0 0 30px #ff00ff;}50%{text-shadow:0 0 60px #00ffff;}100%{text-shadow:0 0 90px #ff8800;}}
+@keyframes pulseBtn{0%{transform:scale(1);}50%{transform:scale(1.2) rotate(5deg);}100%{transform:scale(1);}}
 </style>
 </head>
 <body>
@@ -136,7 +138,7 @@ footer{text-align:center;padding:2rem;color:#555;background:#0a0a0a;}
 
 <header>
   <h1>Omar Dev</h1>
-  <p>Developer | AI Enthusiast</p>
+  <p>Developer | AI Enthusiast | CRAZY MODE ON</p>
   <div>
     <a href="#projects" class="btn">Projects</a>
     <a href="#about" class="btn">About</a>
@@ -165,7 +167,7 @@ footer{text-align:center;padding:2rem;color:#555;background:#0a0a0a;}
 <footer>&copy; 2025 Omar Dev. All rights reserved.</footer>
 
 <script>
-// Projects data
+// Projects
 const projects = [
   {name:"MaxyBot", description:"Discord bot for server management and fun commands.", link:"https://discord.com/oauth2/authorize?client_id=1409945925064982668&permissions=268823630&scope=bot%20applications.commands"},
   {name:"Coders Community", description:"Discord server for developers and coders community.", link:"https://discord.gg/45WSrrD478"}
@@ -173,22 +175,22 @@ const projects = [
 
 const container = document.getElementById('projects');
 const cards = [];
-const colors = ['#ff00ff','#00ffff','#ff0000','#00ff00','#ffff00','#ff8800'];
+const colors = ['#ff00ff','#00ffff','#ff0000','#00ff00','#ffff00','#ff8800','#ff00ff','#00ffff'];
 
 // Create cards
 projects.forEach(p => {
   const card = document.createElement('div');
   card.className = 'project-card';
-  card.style.left = Math.random() * (window.innerWidth - 300) + 'px';
+  card.style.left = Math.random() * (window.innerWidth - 320) + 'px';
   card.style.top = Math.random() * (window.innerHeight - 300) + 'px';
-  card.dataset.vx = (Math.random()-0.5)*12;
-  card.dataset.vy = (Math.random()-0.5)*12;
+  card.dataset.vx = (Math.random()-0.5)*20;
+  card.dataset.vy = (Math.random()-0.5)*20;
   card.innerHTML = `<img src="${p.name}.png" alt="${p.name}"><h3>${p.name}</h3><p>${p.description}</p><a href="${p.link}" target="_blank" class="btn">Visit</a>`;
   container.appendChild(card);
   cards.push(card);
 });
 
-// CRAZY+++++++++
+// CRAZY INTERACTION
 let freeze = false;
 document.addEventListener('mousemove', e => {
   if(freeze) return;
@@ -197,15 +199,15 @@ document.addEventListener('mousemove', e => {
     let dx = e.clientX - (rect.left + rect.width/2);
     let dy = e.clientY - (rect.top + rect.height/2);
     let dist = Math.sqrt(dx*dx + dy*dy);
-    if(dist < 250){
-      card.dataset.vx = parseFloat(card.dataset.vx) + (Math.random()*15 - 7.5) - dx/15;
-      card.dataset.vy = parseFloat(card.dataset.vy) + (Math.random()*15 - 7.5) - dy/15;
-      if(Math.random()<0.1){
-        card.style.left = Math.random()*(window.innerWidth-300)+'px';
+    if(dist < 300){
+      card.dataset.vx = parseFloat(card.dataset.vx) + (Math.random()*20 - 10) - dx/10;
+      card.dataset.vy = parseFloat(card.dataset.vy) + (Math.random()*20 - 10) - dy/10;
+      card.style.transform = `rotate(${Math.random()*720-360}deg) scale(${1+Math.random()*0.5})`;
+      card.style.boxShadow = `0 0 50px ${colors[Math.floor(Math.random()*colors.length)]},0 0 100px ${colors[Math.floor(Math.random()*colors.length)]}`;
+      if(Math.random()<0.05){
+        card.style.left = Math.random()*(window.innerWidth-320)+'px';
         card.style.top = Math.random()*(window.innerHeight-300)+'px';
       }
-      card.style.transform = `rotate(${Math.random()*360-180}deg)`;
-      card.style.boxShadow = `0 0 30px ${colors[Math.floor(Math.random()*colors.length)]},0 0 60px ${colors[Math.floor(Math.random()*colors.length)]}`;
     }
   });
 });
@@ -217,10 +219,10 @@ function animate(){
     let y=parseFloat(card.style.top);
     x+=parseFloat(card.dataset.vx);
     y+=parseFloat(card.dataset.vy);
-    if(x<-100){x=-100; card.dataset.vx*=-1;}
-    if(y<-100){y=-100; card.dataset.vy*=-1;}
+    if(x<-150){x=-150; card.dataset.vx*=-1;}
+    if(y<-150){y=-150; card.dataset.vy*=-1;}
     if(x>window.innerWidth-180){x=window.innerWidth-180; card.dataset.vx*=-1;}
-    if(y>window.innerHeight-150){y=window.innerHeight-150; card.dataset.vy*=-1;}
+    if(y>window.innerHeight-180){y=window.innerHeight-180; card.dataset.vy*=-1;}
     card.style.left=x+'px';
     card.style.top=y+'px';
   });
@@ -232,7 +234,7 @@ animate();
 cards.forEach(card=>{
   card.addEventListener('click', ()=>{
     freeze=true;
-    cards.forEach(c=>c.style.transform='rotate(0deg)');
+    cards.forEach(c=>c.style.transform='rotate(0deg) scale(1)');
     cards.forEach(c=>c.style.boxShadow='0 0 20px rgba(0,255,255,0.2),0 0 40px rgba(0,255,255,0.2)');
   });
 });
